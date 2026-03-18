@@ -12,13 +12,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .hdr{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:1.25rem;border-bottom:1px solid #e8e8e4;margin-bottom:1.5rem;gap:12px}
 .hdr h1{font-size:16px;font-weight:600;margin-bottom:3px;color:#1a1a1a}
 .hdr p{font-size:12px;color:#6b6b68}
-.hdr-right{font-size:11px;color:#6b6b68;text-align:right;line-height:1.6;flex-shrink:0}
-.hdr-right strong{font-size:15px;color:#1a1a1a;display:block}
+.hdr-badge{font-size:11px;background:#EDE9FE;color:#5B21B6;padding:3px 10px;border-radius:6px;font-weight:500;white-space:nowrap;margin-top:2px;display:inline-block}
 
 .sec-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#6b6b68;margin:1.5rem 0 .6rem;display:flex;align-items:center;gap:8px}
 .sec-label::after{content:'';flex:1;height:1px;background:#e8e8e4}
 .sec-desc{font-size:12px;color:#6b6b68;margin-bottom:10px;line-height:1.6}
 
+/* Elim */
 .elim-grid{display:flex;flex-direction:column;gap:5px}
 .elim-row{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid #e8e8e4;background:#fafaf8;cursor:pointer;transition:border-color .15s}
 .elim-row:hover{border-color:#c8c8c4}
@@ -29,7 +29,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .elim-row.blocked .elim-check{background:#E24B4A;border-color:#E24B4A;color:#fff}
 .elim-title{font-size:13px;font-weight:500;margin-bottom:2px}
 .elim-desc{font-size:11px;color:#6b6b68;line-height:1.5}
-.elim-tag{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:500;margin-left:6px}
+.elim-tags{display:inline-flex;gap:4px;flex-wrap:wrap;margin-left:6px}
+.elim-tag{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:500}
 .tag-ops{background:#FEF3C7;color:#92400E}
 .tag-legal{background:#FEE2E2;color:#991B1B}
 .tag-carbon{background:#EDE9FE;color:#5B21B6}
@@ -37,6 +38,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .elim-banner{display:none;margin-top:8px;padding:10px 14px;border-radius:8px;background:#FEE2E2;border-left:3px solid #E24B4A;font-size:12px;line-height:1.7;color:#7f1d1d}
 .elim-banner.visible{display:block}
 
+/* Factors */
 .factor-grid{display:flex;flex-direction:column;gap:5px;transition:opacity .2s}
 .factor-row{border:1px solid #e8e8e4;border-radius:8px;overflow:hidden;background:#fafaf8}
 .factor-hdr{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer}
@@ -44,7 +46,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .factor-icon{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .factor-name{font-size:13px;font-weight:500;flex:1;color:#1a1a1a}
 .factor-badge{font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500;white-space:nowrap}
-.factor-contrib{font-size:12px;font-weight:500;min-width:80px;text-align:right}
 .factor-chev{font-size:10px;color:#9b9b98;transition:transform .2s}
 .factor-chev.open{transform:rotate(180deg)}
 .factor-body{display:none;padding:0 12px 12px}
@@ -56,46 +57,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .opt-radio{width:14px;height:14px;border-radius:50%;border:1.5px solid #c8c8c4;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center}
 .opt-radio.filled::after{content:'';width:6px;height:6px;border-radius:50%;background:currentColor}
 .opt-text{flex:1;line-height:1.4;color:#1a1a1a}
-.opt-adicional{font-size:11px;font-weight:600;white-space:nowrap;margin-top:1px}
+.opt-nivel{font-size:11px;font-weight:500;white-space:nowrap;margin-top:1px;padding:1px 6px;border-radius:4px}
 
+/* Progress */
 .progress-wrap{margin-bottom:1rem}
 .progress-label{font-size:11px;color:#6b6b68;margin-bottom:4px}
 .progress-bar{height:3px;background:#e8e8e4;border-radius:2px}
 .progress-fill{height:100%;border-radius:2px;background:#1D9E75;transition:width .3s}
 
+/* Gauge */
 .gauge-wrap{margin:1.25rem 0 .5rem;padding:16px;border-radius:10px;border:1px solid #e8e8e4;background:#fafaf8}
 .gauge-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;color:#6b6b68}
-.gauge-track{position:relative;height:12px;border-radius:6px;overflow:hidden;display:flex;margin-bottom:8px}
+.gauge-track{position:relative;height:14px;border-radius:7px;overflow:hidden;display:flex;margin-bottom:8px}
 .gauge-z1{flex:20;background:#86EFAC}
 .gauge-z2{flex:15;background:#FDE68A}
 .gauge-z3{flex:65;background:#FCA5A5}
-.gauge-needle{position:absolute;top:-3px;width:3px;height:18px;border-radius:2px;background:#1a1a1a;transform:translateX(-50%);transition:left .5s cubic-bezier(.4,0,.2,1)}
-.gauge-labels{display:flex;font-size:10px;color:#6b6b68;margin-bottom:12px}
+.gauge-needle{position:absolute;top:-3px;width:3px;height:20px;border-radius:2px;background:#1a1a1a;transform:translateX(-50%);transition:left .5s cubic-bezier(.4,0,.2,1)}
+.gauge-labels{display:flex;font-size:10px;color:#6b6b68;margin-bottom:14px}
 .gauge-labels span:nth-child(1){flex:20;text-align:left}
 .gauge-labels span:nth-child(2){flex:15;text-align:center}
 .gauge-labels span:nth-child(3){flex:65;text-align:right}
 .gauge-zones{display:flex;gap:8px}
-.gauge-zone{flex:1;padding:8px 10px;border-radius:6px;font-size:11px;line-height:1.5}
-.gz-label{font-weight:600;margin-bottom:3px}
+.gauge-zone{flex:1;padding:10px 10px;border-radius:8px;font-size:11px;line-height:1.6}
+.gz-label{font-weight:600;margin-bottom:3px;font-size:12px}
 
+/* Factor impact visual — no prices */
+.impact-bars{margin-bottom:14px}
+.ibar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.ibar-name{font-size:11px;color:#6b6b68;width:155px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ibar-dots{display:flex;gap:3px;flex:1}
+.ibar-dot{width:14px;height:14px;border-radius:3px;background:#e8e8e4;transition:background .3s}
+.ibar-label{font-size:11px;font-weight:500;min-width:60px;text-align:right}
+
+/* Result */
 .result-panel{margin-top:1rem;border-radius:10px;border:1px solid #e8e8e4;overflow:hidden;display:none}
-.result-top{padding:14px 16px;display:flex;align-items:center;gap:12px}
-.result-verdict{font-size:14px;font-weight:600;flex:1}
-.result-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 16px;border-top:1px solid #e8e8e4;background:#fafaf8}
-.rmet{padding:10px;border-radius:8px;background:#fff;border:1px solid #e8e8e4}
-.rmet-label{font-size:10px;color:#6b6b68;margin-bottom:3px}
-.rmet-val{font-size:15px;font-weight:600}
-.breakdown{padding:0 16px 14px}
-.breakdown-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b6b68;margin:14px 0 8px}
-.bk-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
-.bk-name{font-size:11px;color:#6b6b68;width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bk-bar-track{flex:1;height:5px;background:#e8e8e4;border-radius:3px;overflow:hidden}
-.bk-bar-fill{height:100%;border-radius:3px;transition:width .4s}
-.bk-val{font-size:11px;font-weight:600;width:60px;text-align:right}
-.note-box{margin:0 16px 12px;padding:10px 12px;border-radius:8px;border-left:3px solid;font-size:12px;line-height:1.7}
-.rec-box{margin:0 16px 14px;padding:10px 12px;border-radius:8px;background:#fafaf8;border:1px solid #e8e8e4;font-size:12px;line-height:1.7}
-.rec-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b6b68;margin-bottom:4px}
-.reset-btn{margin:0 16px 16px;font-size:12px;padding:7px 16px;border-radius:7px;border:1px solid #e8e8e4;background:#fff;color:#6b6b68;cursor:pointer;display:block;transition:background .15s}
+.result-top{padding:16px 16px;display:flex;align-items:center;gap:12px}
+.result-verdict{font-size:15px;font-weight:600;flex:1}
+.result-body{padding:14px 16px;border-top:1px solid #e8e8e4}
+.result-msg{font-size:13px;line-height:1.7;margin-bottom:12px;padding:12px 14px;border-radius:8px;border-left:3px solid}
+.result-next{padding:10px 12px;border-radius:8px;background:#fafaf8;border:1px solid #e8e8e4;font-size:12px;line-height:1.7}
+.result-next-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b6b68;margin-bottom:4px}
+
+.reset-btn{margin-top:12px;font-size:12px;padding:7px 16px;border-radius:7px;border:1px solid #e8e8e4;background:#fff;color:#6b6b68;cursor:pointer;display:block;transition:background .15s}
 .reset-btn:hover{background:#f5f5f0}
 
 .footer{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e8e8e4;font-size:11px;color:#9b9b98;text-align:center}
@@ -108,22 +111,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   <div>
     <h1>MORFO — Scoreboard de Elegibilidade de Projetos</h1>
     <p>ARR de Carbono · Brasil · Pré-qualificação para contrato a preço fixo</p>
-  </div>
-  <div class="hdr-right">
-    <strong>R$ 25.000 / ha</strong>
-    Preço de venda padrão<br>incl. 14,25% impostos BR
+    <span class="hdr-badge">Versão cliente</span>
   </div>
 </div>
 
 <!-- CAMADA 1 -->
 <div class="sec-label">Camada 1 — Condições eliminatórias</div>
-<p class="sec-desc">Todas devem ser confirmadas antes de qualquer discussão de preço. Um único item não resolvido bloqueia o projeto.</p>
+<p class="sec-desc">Todos esses pontos devem estar confirmados antes de qualquer etapa seguinte. Um item não resolvido bloqueia o projeto.</p>
 <div class="elim-grid" id="elim-grid"></div>
 <div class="elim-banner" id="elim-banner"></div>
 
 <!-- CAMADA 2 -->
-<div class="sec-label" id="l2-label">Camada 2 — Fatores de variação de preço</div>
-<p class="sec-desc" id="l2-desc">Esses elementos determinam se a MORFO pode absorver o risco ao preço padrão, ou se uma adaptação de preço é necessária.</p>
+<div class="sec-label" id="l2-label">Camada 2 — Fatores de complexidade do projeto</div>
+<p class="sec-desc" id="l2-desc">Esses elementos influenciam a viabilidade operacional e o nível de risco do projeto. Cada fator contribui para o nível geral de complexidade.</p>
 
 <div class="progress-wrap">
   <div class="progress-label" id="prog-label">0 de 6 fatores avaliados</div>
@@ -134,7 +134,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 
 <!-- MEDIDOR -->
 <div class="gauge-wrap" id="gauge-wrap" style="display:none">
-  <div class="gauge-title">Nível de custo adicional total estimado</div>
+  <div class="gauge-title">Nível de complexidade global do projeto</div>
   <div style="position:relative">
     <div class="gauge-track">
       <div class="gauge-z1"></div>
@@ -144,26 +144,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
     </div>
   </div>
   <div class="gauge-labels">
-    <span>0%</span><span>20%</span><span>35%+</span>
+    <span>Baixo</span><span>Moderado</span><span>Elevado</span>
   </div>
   <div class="gauge-zones">
     <div class="gauge-zone" style="background:#F0FDF4;border:1px solid #86EFAC">
-      <div class="gz-label" style="color:#166534">🟢 Zona 1 — Absorvível</div>
-      Custo adicional ≤ 20% (≤ R$ 5.000/ha)<br>
-      <strong>Preço: R$ 25.000/ha</strong><br>
-      MORFO absorve o risco
+      <div class="gz-label" style="color:#166534">🟢 Zona 1 — Projeto padrão</div>
+      Complexidade baixa. Condições favoráveis para implementação no modelo padrão MORFO.
     </div>
     <div class="gauge-zone" style="background:#FFFBEB;border:1px solid #FDE68A">
-      <div class="gz-label" style="color:#92400E">🟡 Zona 2 — Preço ajustado</div>
-      Custo adicional 21–35% (R$ 5.001–8.750/ha)<br>
-      <strong>Preço: R$ 30.000/ha</strong><br>
-      Condições do site comunicadas
+      <div class="gz-label" style="color:#92400E">🟡 Zona 2 — Complexidade moderada</div>
+      Alguns fatores exigem atenção específica. Estrutura adaptada às condições do site.
     </div>
     <div class="gauge-zone" style="background:#FEF2F2;border:1px solid #FCA5A5">
-      <div class="gz-label" style="color:#991B1B">🔴 Zona 3 — Revisão obrigatória</div>
-      Custo adicional > 35% (> R$ 8.750/ha)<br>
-      <strong>Preço: a definir</strong><br>
-      Diagnóstico de campo necessário
+      <div class="gz-label" style="color:#991B1B">🔴 Zona 3 — Análise aprofundada necessária</div>
+      Nível de complexidade elevado. Diagnóstico de campo obrigatório antes de prosseguir.
     </div>
   </div>
 </div>
@@ -173,24 +167,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   <div class="result-top" id="result-top">
     <div class="result-verdict" id="result-verdict"></div>
   </div>
-  <div class="result-metrics">
-    <div class="rmet"><div class="rmet-label">Preço de venda recomendado</div><div class="rmet-val" id="r-price"></div></div>
-    <div class="rmet"><div class="rmet-label">Custo adicional estimado total</div><div class="rmet-val" id="r-adicional"></div></div>
-    <div class="rmet"><div class="rmet-label">% do preço de venda</div><div class="rmet-val" id="r-pct"></div></div>
+  <div class="result-body">
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b6b68;margin-bottom:8px">Perfil de complexidade por fator</div>
+    <div class="impact-bars" id="impact-bars"></div>
+    <div class="result-msg" id="result-msg"></div>
+    <div class="result-next">
+      <div class="result-next-title">Próxima etapa</div>
+      <div id="result-next-text"></div>
+    </div>
+    <button class="reset-btn" onclick="resetAll()">↺ Reiniciar — novo projeto</button>
   </div>
-  <div class="breakdown">
-    <div class="breakdown-title">Detalhamento por fator</div>
-    <div id="bk-rows"></div>
-  </div>
-  <div class="note-box" id="note-box"></div>
-  <div class="rec-box">
-    <div class="rec-title">Próxima etapa recomendada</div>
-    <div id="rec-text"></div>
-  </div>
-  <button class="reset-btn" onclick="resetAll()">↺ Reiniciar — novo projeto</button>
 </div>
 
-<div class="footer">MORFO · ARR de Carbono Brasil · Custos adicionais expressos em preço de venda com impostos (14,25% incluídos) · Teto de custo interno: R$ 21.877/ha a 25k | R$ 26.264/ha a 30k</div>
+<div class="footer">MORFO · ARR de Carbono Brasil · Este documento é para uso de pré-qualificação. Proposta comercial detalhada disponível após análise técnica.</div>
 
 </div>
 
@@ -200,66 +189,85 @@ const ZONE1_MAX  = 5000;
 const ZONE2_MAX  = 8750;
 
 const elimItems = [
-  { id:'kpis',          title:'Critérios de sucesso 100% definidos',              desc:'Taxas de sobrevivência, fechamento de dossel, indicadores de biodiversidade, metodologia de medição e processo de auditoria inteiramente acordados antes da assinatura do contrato.', tag:'tag-ops',    tagLabel:'Ops' },
-  { id:'licenses',      title:'Licenças ambientais & CAR em conformidade',        desc:'Cadastro SICAR completo, todas as licenças ambientais necessárias obtidas, nenhum embargo em vigor na área.', tag:'tag-legal',  tagLabel:'Jurídico' },
-  { id:'additionality', title:'Adicionalidade de carbono defensável',             desc:'O projeto deve demonstrar que a restauração não ocorreria sem financiamento de carbono, conforme a metodologia VCS / Gold Standard aplicável.', tag:'tag-carbon', tagLabel:'Carbono' },
-  { id:'access',        title:'Acesso físico confirmado durante todo o ano',      desc:'A área deve ser acessível tanto na estação seca quanto na estação chuvosa. Interrupção sazonal = operações impossíveis = contrato inexequível.', tag:'tag-ops',    tagLabel:'Ops' },
-  { id:'payment',       title:'Capacidade de pagamento do cliente verificada',    desc:'Due diligence financeira básica do cliente. Contratos a preço fixo exigem que a MORFO assuma o risco de custo — o risco de crédito do cliente deve ser limitado.', tag:'tag-legal',  tagLabel:'Jurídico/Finanças' }
+  { id:'kpis',          title:'Critérios de sucesso 100% definidos',
+    desc:'Taxas de sobrevivência, fechamento de dossel, indicadores de biodiversidade, metodologia de medição e processo de auditoria inteiramente acordados antes da assinatura.',
+    tags:[{cls:'tag-ops',lbl:'Ops'}] },
+  { id:'licenses',      title:'Licenças ambientais & CAR em conformidade',
+    desc:'Cadastro SICAR completo, todas as licenças ambientais necessárias obtidas, nenhum embargo em vigor na área.',
+    tags:[{cls:'tag-legal',lbl:'Jurídico'},{cls:'tag-carbon',lbl:'Carbono'}] },
+  { id:'additionality', title:'Adicionalidade de carbono defensável',
+    desc:'O projeto deve demonstrar que a restauração não ocorreria sem financiamento de carbono, conforme a metodologia VCS / Gold Standard aplicável.',
+    tags:[{cls:'tag-carbon',lbl:'Carbono'}] },
+  { id:'access',        title:'Acesso físico confirmado durante todo o ano',
+    desc:'A área deve ser acessível tanto na estação seca quanto na estação chuvosa. Interrupção sazonal = operações impossíveis = contrato inexequível.',
+    tags:[{cls:'tag-ops',lbl:'Ops'}] },
+  { id:'mechanization', title:'Mecanização viável na área',
+    desc:'A execução em escala exige capacidade de mecanização. Áreas onde a mecanização é impossível (declividade extrema, obstáculos permanentes, zonas protegidas) devem ser excluídas do escopo ou tratadas separadamente.',
+    tags:[{cls:'tag-ops',lbl:'Ops'}] },
+  { id:'erosion',       title:'Ausência de erosão severa ou processos ativos',
+    desc:'Áreas com erosão ativa severa (ravinas, voçorocas em expansão, instabilidade de encostas) requerem obras de contenção prévias que estão fora do escopo de restauração florestal da MORFO.',
+    tags:[{cls:'tag-ops',lbl:'Ops'}] },
+  { id:'manual',        title:'Plantio manual não representa mais de 25% do projeto',
+    desc:'Quando o plantio manual ultrapassa 25% da área total, o modelo operacional e os custos mudam significativamente. Projetos acima desse limiar requerem análise específica antes de contratação.',
+    tags:[{cls:'tag-ops',lbl:'Ops'}] },
+  { id:'payment',       title:'Capacidade de pagamento do cliente verificada',
+    desc:'Due diligence financeira básica do cliente. Contratos a preço fixo exigem que a MORFO assuma o risco de custo — o risco de crédito do cliente deve ser limitado.',
+    tags:[{cls:'tag-legal',lbl:'Jurídico'},{cls:'tag-carbon',lbl:'Finanças'}] }
 ];
 
 const factors = [
   { id:'area',      name:'Área & nível de degradação', color:'#1D9E75',
-    expl:'O tamanho, a fragmentação e a intensidade da degradação determinam diretamente o custo operacional por ha. Áreas muito degradadas exigem mais mudas, mais sementes e mais intervenções corretivas.',
+    expl:'O tamanho, a fragmentação e a intensidade da degradação determinam o esforço operacional necessário. Áreas mais degradadas ou fragmentadas exigem intervenções mais intensivas.',
     opts:[
-      { label:'Área grande, contígua, degradação baixa a moderada',                     adicional:0 },
-      { label:'Fragmentação leve ou uso histórico significativo do solo',                adicional:1000 },
-      { label:'Alta fragmentação ou degradação severa',                                  adicional:3000 },
-      { label:'Degradação extrema, mosaico complexo, histórico de restauração',          adicional:5500 }
+      { label:'Área grande, contígua, degradação baixa a moderada',              peso:0 },
+      { label:'Fragmentação leve ou uso histórico significativo do solo',         peso:1 },
+      { label:'Alta fragmentação ou degradação severa',                           peso:2 },
+      { label:'Degradação extrema, mosaico complexo',                            peso:3 }
     ]
   },
   { id:'logistics', name:'Logística & acesso ao site', color:'#BA7517',
-    expl:'Distância da base operacional da MORFO, dificuldade do terreno, disponibilidade de mão de obra local. Abaixo de 200 ha, os custos fixos de mobilização representam uma parcela desproporcional do custo por ha.',
+    expl:'Distância da base operacional, dificuldade do terreno e disponibilidade de mão de obra local. Sites remotos ou de difícil acesso aumentam o esforço de mobilização.',
     opts:[
-      { label:'Próximo a uma base MORFO, bom acesso o ano todo, terreno plano',    adicional:0 },
-      { label:'Distância moderada, desafios de terreno menores',                   adicional:1000 },
-      { label:'Site distante ou terreno difícil, restrições sazonais',             adicional:3000 },
-      { label:'Muito distante, terreno complexo, mão de obra local limitada',      adicional:5000 }
+      { label:'Próximo à base MORFO, bom acesso o ano todo, terreno plano',  peso:0 },
+      { label:'Distância moderada, desafios de terreno menores',              peso:1 },
+      { label:'Site distante ou terreno difícil, restrições sazonais',        peso:2 },
+      { label:'Muito distante, terreno complexo, mão de obra local limitada', peso:3 }
     ]
   },
   { id:'scale',     name:'Escala do projeto', color:'#534AB7',
-    expl:'Abaixo de ~200 ha, os custos fixos de gestão de projeto e mobilização dominam a economia unitária. Um projeto piloto de 50 ha absorve os mesmos custos fixos que um programa de 500 ha — distribuídos por muito menos hectares.',
+    expl:'A escala influencia diretamente a eficiência operacional. Projetos menores têm custos fixos proporcionalmente maiores e menos oportunidade de otimização ao longo do tempo.',
     opts:[
-      { label:'500+ ha / ano, programa plurianual',    adicional:0 },
-      { label:'200–500 ha / ano',                      adicional:500 },
-      { label:'50–200 ha, fase única',                 adicional:2500 },
-      { label:'< 50 ha, projeto piloto isolado',       adicional:4000 }
+      { label:'500+ ha / ano, programa plurianual',  peso:0 },
+      { label:'200–500 ha / ano',                    peso:1 },
+      { label:'50–200 ha, fase única',               peso:2 },
+      { label:'< 50 ha, projeto piloto isolado',     peso:3 }
     ]
   },
   { id:'scope',     name:'Escopo de atuação da MORFO', color:'#185FA5',
-    expl:'Apenas plantio vs. manutenção completa, monitoramento, garantias de sobrevivência e suporte à certificação. Cada camada adicional aumenta a exposição ao risco e a base de custos da MORFO.',
+    expl:'O nível de responsabilidade assumido pela MORFO — do simples plantio até a certificação de carbono — define a complexidade de execução e monitoramento do contrato.',
     opts:[
-      { label:'Plantio + manutenção ano 1, sem garantias',                         adicional:0 },
-      { label:'Implementação completa + manutenção plurianual',                    adicional:1000 },
-      { label:'Escopo completo + garantias de taxa de sobrevivência definidas',    adicional:2000 },
-      { label:'Escopo completo + compromisso de certificação de carbono',          adicional:3500 }
+      { label:'Plantio + manutenção ano 1, sem garantias',                       peso:0 },
+      { label:'Implementação completa + manutenção plurianual',                  peso:1 },
+      { label:'Escopo completo + garantias de taxa de sobrevivência definidas',  peso:2 },
+      { label:'Escopo completo + compromisso de certificação de carbono',        peso:3 }
     ]
   },
   { id:'seed',      name:'Disponibilidade de sementes nativas', color:'#639922',
-    expl:'Acesso às sementes das espécies necessárias, em volume suficiente e a custo previsível. Plantios de alta diversidade e áreas remotas aumentam significativamente o custo e o risco de abastecimento.',
+    expl:'A disponibilidade local das espécies necessárias, em volume adequado e a custo previsível, é essencial para a viabilidade do projeto. Espécies raras ou alta diversidade exigida aumentam a complexidade de abastecimento.',
     opts:[
-      { label:'Espécies disponíveis, fornecimento confirmado, custo controlado',                adicional:0 },
-      { label:'A maioria das espécies disponíveis, esforço de abastecimento menor',             adicional:500 },
-      { label:'Algumas espécies escassas, campanha de coleta necessária',                       adicional:2500 },
-      { label:'Espécies-chave indisponíveis localmente, alta diversidade exigida',             adicional:4000 }
+      { label:'Espécies disponíveis, fornecimento confirmado, custo controlado',               peso:0 },
+      { label:'A maioria das espécies disponíveis, esforço de abastecimento menor',            peso:1 },
+      { label:'Algumas espécies escassas, campanha de coleta necessária',                      peso:2 },
+      { label:'Espécies-chave indisponíveis localmente, alta diversidade exigida',            peso:3 }
     ]
   },
   { id:'mortality', name:'Risco de mortalidade & replantio', color:'#D85A30',
-    expl:'A mortalidade no primeiro ano depende da qualidade do solo, hidrologia, pluviosidade e pressão de espécies invasoras. Se a MORFO assumir garantias de sobrevivência, qualquer % abaixo da meta gera uma obrigação de replantio às custas da MORFO.',
+    expl:'A qualidade do solo, hidrologia e pressão de espécies invasoras determinam o risco de mortalidade no primeiro ano. Sites com alta incerteza nesses fatores requerem maior atenção no planejamento.',
     opts:[
-      { label:'Site bem preparado, solo validado, baixa pressão invasora',                        adicional:0 },
-      { label:'Boas condições, algumas incógnitas menores',                                       adicional:500 },
-      { label:'Site não testado, risco invasor possível, condições médias',                       adicional:2000 },
-      { label:'Alta pressão invasora, dados de solo insuficientes, hidrologia difícil',          adicional:3500 }
+      { label:'Site bem preparado, solo validado, baixa pressão invasora',                       peso:0 },
+      { label:'Boas condições, algumas incógnitas menores',                                      peso:1 },
+      { label:'Site não testado, risco invasor possível, condições médias',                      peso:2 },
+      { label:'Alta pressão invasora, dados de solo insuficientes, hidrologia difícil',         peso:3 }
     ]
   }
 ];
@@ -268,12 +276,13 @@ const elimState  = {};
 const factorState = {};
 let openFactor = null;
 
+/* ─── ELIM ─── */
 function renderElim() {
   document.getElementById('elim-grid').innerHTML = elimItems.map(e => `
     <div class="elim-row" id="elim-${e.id}" onclick="toggleElim('${e.id}')">
       <div class="elim-check" id="echeck-${e.id}"></div>
       <div style="flex:1">
-        <div class="elim-title">${e.title}<span class="elim-tag ${e.tag}">${e.tagLabel}</span></div>
+        <div class="elim-title">${e.title}<span class="elim-tags">${e.tags.map(t=>`<span class="elim-tag ${t.cls}">${t.lbl}</span>`).join('')}</span></div>
         <div class="elim-desc">${e.desc}</div>
       </div>
       <div class="elim-status" id="estatus-${e.id}" style="color:#9b9b98;font-size:11px;font-weight:500;flex-shrink:0;margin-top:2px">—</div>
@@ -301,7 +310,7 @@ function updateElimUI() {
   const banner  = document.getElementById('elim-banner');
   if (blocked.length > 0) {
     banner.classList.add('visible');
-    banner.innerHTML = `<strong>⛔ Projeto bloqueado.</strong> ${blocked.length} condição${blocked.length>1?'ões':''} não resolvida${blocked.length>1?'s':''}: <strong>${blocked.map(e=>e.title).join(', ')}</strong>. Nenhuma discussão de preço deve ocorrer até que esses pontos sejam resolvidos.`;
+    banner.innerHTML = `<strong>⛔ Projeto bloqueado.</strong> ${blocked.length} condição${blocked.length>1?'ões':''} não resolvida${blocked.length>1?'s':''}: <strong>${blocked.map(e=>e.title).join('; ')}</strong>. É necessário resolver esses pontos antes de prosseguir.`;
   } else { banner.classList.remove('visible'); }
 }
 
@@ -318,16 +327,17 @@ function updateLayerAccess() {
   }
 }
 
+/* ─── FACTORS ─── */
 function renderFactors() {
-  const col = v => v===0?'#166534':v<=1500?'#3B6D11':v<=3000?'#92400E':'#991B1B';
-  const bg  = v => v===0?'#F0FDF4':v<=1500?'#F7FEE7':v<=3000?'#FFFBEB':'#FEF2F2';
+  const nivelCor  = p => p===0?'#166534':p===1?'#3B6D11':p===2?'#92400E':'#991B1B';
+  const nivelBg   = p => p===0?'#F0FDF4':p===1?'#F7FEE7':p===2?'#FFFBEB':'#FEF2F2';
+  const nivelNome = p => p===0?'Sem impacto':p===1?'Baixo':p===2?'Moderado':'Elevado';
   document.getElementById('factor-grid').innerHTML = factors.map(f=>`
     <div class="factor-row" id="frow-${f.id}">
       <div class="factor-hdr" onclick="toggleFactor('${f.id}')">
         <div class="factor-icon" style="background:${f.color}"></div>
         <div class="factor-name">${f.name}</div>
         <div class="factor-badge" id="fbadge-${f.id}" style="background:#f5f5f0;color:#9b9b98;border:1px solid #e8e8e4">Não avaliado</div>
-        <div class="factor-contrib" id="fcontrib-${f.id}" style="color:#9b9b98"></div>
         <div class="factor-chev" id="fchev-${f.id}">▼</div>
       </div>
       <div class="factor-body" id="fbody-${f.id}">
@@ -336,7 +346,7 @@ function renderFactors() {
           <div class="opt-item" id="opt-${f.id}-${i}" onclick="setFactor('${f.id}',${i})">
             <div class="opt-radio" id="radio-${f.id}-${i}"></div>
             <div class="opt-text">${o.label}</div>
-            <div class="opt-adicional" style="color:${col(o.adicional)}">${o.adicional===0?'Sem custo adicional':'+R$ '+o.adicional.toLocaleString('pt-BR')+'/ha'}</div>
+            <span class="opt-nivel" style="color:${nivelCor(o.peso)};background:${nivelBg(o.peso)}">${nivelNome(o.peso)}</span>
           </div>`).join('')}
         </div>
       </div>
@@ -357,28 +367,24 @@ function toggleFactor(id) {
 function setFactor(id, idx) {
   factorState[id]=idx;
   const f=factors.find(f=>f.id===id), o=f.opts[idx];
-  const ad=o.adicional;
-  const col=ad===0?'#166634':ad<=1500?'#3B6D11':ad<=3000?'#92400E':'#991B1B';
-  const bg =ad===0?'#F0FDF4':ad<=1500?'#F7FEE7':ad<=3000?'#FFFBEB':'#FEF2F2';
-  const lbl=ad===0?'Sem impacto':ad<=1500?'Baixo':ad<=3000?'Moderado':'Elevado';
+  const p=o.peso;
+  const col=p===0?'#166534':p===1?'#3B6D11':p===2?'#92400E':'#991B1B';
+  const bg =p===0?'#F0FDF4':p===1?'#F7FEE7':p===2?'#FFFBEB':'#FEF2F2';
+  const lbl=p===0?'Sem impacto':p===1?'Baixo':p===2?'Moderado':'Elevado';
 
   f.opts.forEach((_,i)=>{
     const el=document.getElementById('opt-'+id+'-'+i);
     const radio=document.getElementById('radio-'+id+'-'+i);
     const sel=i===idx;
-    const oc=f.opts[i].adicional;
-    const ocolHov=oc===0?'#166534':oc<=1500?'#3B6D11':oc<=3000?'#92400E':'#991B1B';
-    const obg=oc===0?'#F0FDF4':oc<=1500?'#F7FEE7':oc<=3000?'#FFFBEB':'#FEF2F2';
-    el.style.background=sel?obg:'';
-    el.style.borderColor=sel?ocolHov:'';
-    radio.className='opt-radio'+(sel?' filled':'');
-    radio.style.color=sel?ocolHov:'';
+    const op=f.opts[i].peso;
+    const oc=op===0?'#166534':op===1?'#3B6D11':op===2?'#92400E':'#991B1B';
+    const ob=op===0?'#F0FDF4':op===1?'#F7FEE7':op===2?'#FFFBEB':'#FEF2F2';
+    el.style.background=sel?ob:''; el.style.borderColor=sel?oc:'';
+    radio.className='opt-radio'+(sel?' filled':''); radio.style.color=sel?oc:'';
   });
 
   const badge=document.getElementById('fbadge-'+id);
   badge.textContent=lbl; badge.style.background=bg; badge.style.color=col; badge.style.border='1px solid '+col;
-  const contrib=document.getElementById('fcontrib-'+id);
-  contrib.textContent=ad===0?'—':'+R$ '+ad.toLocaleString('pt-BR')+'/ha'; contrib.style.color=col;
 
   updateProgress(); updateGaugeAndResult();
 
@@ -406,8 +412,11 @@ function updateGaugeAndResult() {
 
   if (done>=1) {
     document.getElementById('gauge-wrap').style.display='block';
-    const total=factors.reduce((s,f)=>s+(factorState[f.id]!==undefined?f.opts[factorState[f.id]].adicional:0),0);
-    const pct=Math.min(total/BASE_PRICE*100,100);
+    // Use peso to drive gauge — max possible peso = 3 per factor × 6 = 18
+    // Map to same 3 zones: zone1 = 0-20% → peso 0-3.6, zone2 = 21-35% → 3.6-6.3, zone3 = >35% → >6.3
+    const totalPeso=factors.reduce((s,f)=>s+(factorState[f.id]!==undefined?f.opts[factorState[f.id]].peso:0),0);
+    const maxPeso=18;
+    const pct=totalPeso/maxPeso*100;
     let needlePct;
     if (pct<=20)      needlePct=(pct/20)*20;
     else if (pct<=35) needlePct=20+((pct-20)/15)*15;
@@ -417,53 +426,56 @@ function updateGaugeAndResult() {
 
   if (done<factors.length) { document.getElementById('result-panel').style.display='none'; return; }
 
-  const total=factors.reduce((s,f)=>s+f.opts[factorState[f.id]].adicional,0);
-  const pct=Math.round(total/BASE_PRICE*100);
-
-  let price, verdict, topBg, noteBg, noteColor, noteText, rec;
-  if (total<=ZONE1_MAX) {
-    price=25000; verdict='🟢 Zona 1 — Preço padrão aplicável';
-    topBg='#F0FDF4'; noteBg='#F0FDF4'; noteColor='#166534';
-    noteText=`Custo adicional estimado: +R$ ${total.toLocaleString('pt-BR')}/ha (${pct}% do preço de venda). A MORFO absorve esse nível de risco em sua margem. Preço de venda: R$ 25.000/ha, imposto brasileiro de 14,25% incluído. Teto de custo interno: R$ 21.877/ha.`;
-    rec='Prosseguir com a modelagem detalhada de custos e a proposta comercial. Recomenda-se a estrutura Modelo 2 (piloto integrado em contrato de escala) se a área total for ≥ 200 ha.';
-  } else if (total<=ZONE2_MAX) {
-    price=30000; verdict='🟡 Zona 2 — Preço ajustado às condições do site';
-    topBg='#FFFBEB'; noteBg='#FFFBEB'; noteColor='#92400E';
-    noteText=`Custo adicional estimado: +R$ ${total.toLocaleString('pt-BR')}/ha (${pct}% do preço de venda padrão). Esse nível ultrapassa a capacidade de absorção da MORFO ao preço padrão. Preço de venda ajustado: R$ 30.000/ha, refletindo as condições específicas do site identificadas neste scoreboard.`;
-    rec='Apresentar o ajuste de preço ao cliente detalhando os fatores identificados acima. Cada custo adicional documentado justifica a variação de preço de forma transparente.';
-  } else {
-    price=null; verdict='🔴 Zona 3 — Revisão obrigatória antes de qualquer proposta';
-    topBg='#FEF2F2'; noteBg='#FEF2F2'; noteColor='#991B1B';
-    noteText=`Custo adicional estimado: +R$ ${total.toLocaleString('pt-BR')}/ha (${pct}% do preço de venda padrão). Nível de incerteza muito elevado para comprometer um preço fixo. Um diagnóstico de campo é necessário antes que qualquer proposta possa ser emitida.`;
-    rec='Não emitir proposta a preço fixo. Propor ao cliente: (a) diagnóstico de campo prévio financiado separadamente, ou (b) contrato piloto por administração com opção de preço fixo após validação. Validação obrigatória pela equipe de Ops antes de prosseguir.';
-  }
+  const totalPeso=factors.reduce((s,f)=>s+f.opts[factorState[f.id]].peso,0);
+  const maxPeso=18;
+  const zone = totalPeso<=3?1:totalPeso<=6?2:3;
 
   document.getElementById('result-panel').style.display='block';
-  document.getElementById('result-top').style.background=topBg;
-  document.getElementById('result-verdict').textContent=verdict;
-  document.getElementById('r-price').textContent=price?'R$ '+price.toLocaleString('pt-BR')+'/ha':'A definir';
-  document.getElementById('r-price').style.color=price===25000?'#166534':price===30000?'#92400E':'#991B1B';
-  document.getElementById('r-adicional').textContent='+R$ '+total.toLocaleString('pt-BR')+'/ha';
-  document.getElementById('r-adicional').style.color=price===25000?'#166534':price===30000?'#92400E':'#991B1B';
-  document.getElementById('r-pct').textContent=pct+'%';
-  document.getElementById('r-pct').style.color=price===25000?'#166534':price===30000?'#92400E':'#991B1B';
+  const topColors={1:'#F0FDF4',2:'#FFFBEB',3:'#FEF2F2'};
+  document.getElementById('result-top').style.background=topColors[zone];
 
-  const maxAdicional=Math.max(...factors.map(f=>Math.max(...f.opts.map(o=>o.adicional))));
-  document.getElementById('bk-rows').innerHTML=factors.map(f=>{
-    const ad=f.opts[factorState[f.id]].adicional;
-    const pctBar=maxAdicional>0?ad/maxAdicional*100:0;
-    const col=ad===0?'#86EFAC':ad<=1500?'#4ADE80':ad<=3000?'#FDE68A':'#FCA5A5';
-    const textCol=ad===0?'#166534':ad<=1500?'#3B6D11':ad<=3000?'#92400E':'#991B1B';
-    return `<div class="bk-row">
-      <div class="bk-name">${f.name}</div>
-      <div class="bk-bar-track"><div class="bk-bar-fill" style="width:${pctBar}%;background:${col}"></div></div>
-      <div class="bk-val" style="color:${textCol}">${ad===0?'—':'+R$'+ad.toLocaleString('pt-BR')}</div>
+  const verdicts={
+    1:'🟢 Zona 1 — Projeto padrão MORFO',
+    2:'🟡 Zona 2 — Projeto com complexidade moderada',
+    3:'🔴 Zona 3 — Análise aprofundada necessária'
+  };
+  document.getElementById('result-verdict').textContent=verdicts[zone];
+
+  // Impact bars — visual dots (no prices)
+  const dotColors=['#e8e8e4','#86EFAC','#FDE68A','#FCA5A5'];
+  const dotBorderColors=['#c8c8c4','#1D9E75','#BA7517','#E24B4A'];
+  const dotLabels=['Sem impacto','Baixo','Moderado','Elevado'];
+  const dotTextColors=['#9b9b98','#166534','#92400E','#991B1B'];
+  document.getElementById('impact-bars').innerHTML=factors.map(f=>{
+    const p=f.opts[factorState[f.id]].peso;
+    const dots=Array.from({length:3},(_,i)=>{
+      const filled=i<p;
+      const dotColor = filled ? (p===1?'#4ADE80':p===2?'#FDE68A':'#FCA5A5') : '#e8e8e4';
+      return `<div class="ibar-dot" style="background:${dotColor}"></div>`;
+    }).join('');
+    return `<div class="ibar-row">
+      <div class="ibar-name">${f.name}</div>
+      <div class="ibar-dots">${dots}</div>
+      <div class="ibar-label" style="color:${dotTextColors[p]}">${dotLabels[p]}</div>
     </div>`;
   }).join('');
 
-  const nb=document.getElementById('note-box');
-  nb.style.background=noteBg; nb.style.borderLeftColor=noteColor; nb.textContent=noteText;
-  document.getElementById('rec-text').textContent=rec;
+  const msgs={
+    1:'Todas as condições do projeto são favoráveis para implementação no modelo padrão MORFO. O projeto apresenta um perfil de complexidade baixo em todos os fatores avaliados.',
+    2:'O projeto apresenta alguns fatores de complexidade moderada que serão levados em consideração no desenho da proposta. A MORFO adaptará a estrutura de contrato às condições específicas do site.',
+    3:'O projeto apresenta múltiplos fatores de complexidade elevada. Um diagnóstico técnico de campo é necessário antes de definir a proposta mais adequada.'
+  };
+  const msgColors={1:'#F0FDF4',2:'#FFFBEB',3:'#FEF2F2'};
+  const msgBorderColors={1:'#1D9E75',2:'#BA7517',3:'#E24B4A'};
+  const nb=document.getElementById('result-msg');
+  nb.textContent=msgs[zone]; nb.style.background=msgColors[zone]; nb.style.borderLeftColor=msgBorderColors[zone];
+
+  const nexts={
+    1:'A equipe MORFO entrará em contato para apresentar a proposta comercial detalhada.',
+    2:'A equipe MORFO realizará uma análise técnica complementar antes de apresentar a proposta adaptada às condições identificadas.',
+    3:'Um diagnóstico de campo será necessário para avaliar com precisão os fatores de alta complexidade identificados. A MORFO entrará em contato para agendar essa etapa.'
+  };
+  document.getElementById('result-next-text').textContent=nexts[zone];
   document.getElementById('result-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
